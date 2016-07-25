@@ -120,29 +120,31 @@ angular.module('myApp').service('dataService', function(){
         // for loop to validate and if needed amend time closures
         for(var i = 0; i < todayInfo[today].open.length; i++){
             // if close is > close[i] and close is < open [i] then...
-            if(close > todayInfo[today].close[i] && close < todayInfo[today].open[i]){
+            if(close >= todayInfo[today].close[i] && close < todayInfo[today].open[i]){
                 // if the new close time is less than the new open time
-                if(close < todayInfo[today].open[i]){
+                if(close >= todayInfo[today].close[i]){
                     // set open[i] to the new open time
                     todayInfo[today].open[i] = open;
                     // amend to reason to close with the new reason
                     todayInfo[today].reason[i] = todayInfo[today].reason[i] + ' and ' + reason;
                     var data = angular.toJson(todayInfo);
                     localStorage.setItem('hourInfo',data);
+                    valid = 0;
                     location.reload();
                     break;
                 }
             }
             // or if open is > close[i] and open < open[i] then...
-            if(open > todayInfo[today].close[i] && open < todayInfo[today].open[i]){
+            if(open > todayInfo[today].close[i] && open <= todayInfo[today].open[i]){
                 // if the new open time is greater than close[i]
-                if(open > todayInfo[today].close[i]){
+                if(open >= todayInfo[today].open[i]){
                     // then close[i] should be changed to the new close
                     todayInfo[today].close[i] = close;
                     // next amend the reason to reason[i]
                     todayInfo[today].reason[i] = todayInfo[today].reason[i] + ' and ' + reason;
                     var data = angular.toJson(todayInfo);
                     localStorage.setItem('hourInfo',data);
+                    valid = 0;
                     location.reload();
                     break;
                 }
