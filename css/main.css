@@ -97,6 +97,7 @@ label{
 }
 #editForm{
     background:#0089be;
+    border-bottom: 2px solid #00587a;
 }
 
 /*----- Table Styles -----*/
