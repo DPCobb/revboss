@@ -1,0 +1,319 @@
+body{
+    font:12pt/normal 'Helvetica', sans-serif;
+    color:#2c3e50;
+    background:#ECF0F1;
+    padding:0;
+    max-width:2000px;
+}
+/*----- Utility/General Styles -----*/
+button, .button{
+    width:40%;
+    padding:1.5% 3%;
+    border:none;
+    background:#27ae60;
+    color:#ececec;
+    text-transform: uppercase;
+    font-size:.9em;
+    font-weight:700;
+    border-bottom: 2px solid #1b7741;
+    border-radius:5px;
+    transition-duration: 700ms;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button-red{
+    width:60%;
+    padding:10px 30px;
+    border:none;
+    background:#EC644B;
+    color:#ececec;
+    text-transform: uppercase;
+    font-size:.5em;
+    font-weight:700;
+    border-bottom: 2px solid #dc3617;
+    border-radius:5px;
+    transition-duration: 700ms;
+    text-align: center;
+    text-decoration: none;
+}
+.button-red:hover{
+    background:#dc3617;
+    cursor: pointer;
+}
+.large-block button, .large-block .button{
+    position: absolute;
+    bottom:2%;
+    left:50%;
+}
+
+.small-block button{
+    width:50%;
+    padding:2% 3%;
+    position: absolute;
+    bottom:2%;
+    left:45%;
+}
+
+button:hover, .button:hover{
+    background:#1b7741;
+}
+a[title="Back"]{
+    font-size:.75em;
+    color:inherit;
+}
+.half-width{
+    width:46%;
+    padding:2%;
+    margin:0 auto;
+}
+
+/*----- Form Styles -----*/
+select, input{
+    display:block;
+    width:90%;
+    margin: 4% auto;
+    padding:2%;
+    border:none;
+    border-radius:3px;
+    outline:none;
+}
+select{
+    border:0;
+    -webkit-appearance: none;
+    background:url('../images/down.png')98% 50% no-repeat, #fff;
+    background-size:5% 50%;
+    width:94%;
+}
+select:hover{
+    cursor: pointer;
+}
+label{
+    margin-left:4%;
+    font-size:.75em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color:#bdc3c7;
+}
+#editForm{
+    background:#0089be;
+}
+
+/*----- Table Styles -----*/
+table{
+    width: 86%;
+    padding:2%;
+    margin:2% auto 10%;
+    text-align: center;
+}
+thead tr td{
+    padding:2%;
+    font-size:1.5em;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight:700;
+    margin-top: 0;
+    color:#ecf0f1;
+    background:#00587A;
+}
+tbody tr td{
+    padding: 2%;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+tbody tr:nth-of-type(even){
+    background:#bdc3c7;
+}
+
+/*----- Heading Styles -----*/
+
+h1{
+    font-size:.9em;
+    font-weight:700;
+    display: inline-block;
+    margin-top:0;
+}
+
+h2, h4{
+    font-size:.8em;
+    color:#bdc3c7;
+    margin-bottom:0;
+}
+
+h3, h5{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size:7em;
+    font-weight:700;
+    margin-top: 0;
+    color:#ecf0f1;
+    line-height: 1;
+}
+h3{
+    color:#fff;
+}
+h5{
+    font-size:1.5em;
+    font-family: 'Helvetica', sans-serif;
+    line-height: normal;
+}
+
+/*----- Navigation Styles -----*/
+
+nav{
+    width:98%;
+    padding:.5% 1%;
+    color:#2c3e50;
+    position:relative;
+}
+nav ul{
+    list-style-type: none;
+    display:inline-block;
+    width:85%;
+    text-align: right;
+    margin-top:0;
+}
+nav ul li{
+    margin:0;
+    padding:1% 1% .2%;
+    display:inline-block;
+}
+nav ul li a{
+    text-decoration: none;
+    color:inherit;
+    text-transform: uppercase;
+    font-size:.7em;
+}
+.active{
+    border-bottom:2px solid #2980b9;
+    font-weight:700;
+}
+nav ul li:hover{
+    border-bottom:2px solid #27ae60;
+    font-weight:700;
+}
+
+/*----- Main Content Styles -----*/
+
+main{
+    width:86%;
+    padding:2%;
+    margin:0 auto;
+}
+main::after{
+    display:table;
+    content: ' ';
+    clear:both;
+}
+
+.large-block{
+    width:calc(92%/2);
+    float:left;
+    margin:0 auto 1% auto;
+    padding:2%;
+    background:#00587A;
+    border-bottom: 2px solid #002736;
+    height:400px;
+    position: relative;
+    text-align: right;
+}
+.large-block:first-of-type{
+    text-align: left;
+}
+
+.small-block{
+    width:calc(84% / 3);
+    height:200px;
+    padding:2%;
+    margin: 5% 1% 0 0;
+    background:#f5fafd;
+    float:left;
+    border: 1px solid #1d5a81;
+    position: relative;
+}
+.small-block h4{
+    color:#1d5a81;
+}
+.small-block h5{
+    color:#2c3e50;
+    font-weight:700;
+    font-size:2em;
+}
+.small-block:last-of-type{
+    margin-right:0;
+}
+.small-block ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+.small-block ul li{
+    margin:0;
+    font-size:1.2em;
+    color:#2c3e50;
+    font-weight: 500;
+}
+
+/*----- Media Queries -----*/
+@media screen and (max-width:850px){
+    h3{
+        font-size:5em;
+    }
+    .small-block h5, .small-block ul li{
+        font-size:1em;
+    }
+    .small-block{
+        margin-right:1.5%;
+    }
+    .half-width{
+        width:60%;
+    }
+    .button-red{
+        padding:5px 15px;
+    }
+}
+@media screen and (max-width:750px){
+    h3{
+        font-size:3em;
+    }
+    h5{
+        font-size:1em;
+    }
+    .large-block{
+        height:300px;
+    }
+    .small-block{
+        width:70%;
+        margin:2% 15%;
+        float:none;
+        display:inline-block;
+    }
+    .small-block:last-of-type{
+        height:250px;
+    }
+}
+@media screen and (max-width:500px){
+    .large-block{
+        float:none;
+        width:96%;
+        border-bottom:none;
+        height:250px;
+        margin:0 auto;
+        text-align: left;
+    }
+    .small-block, .small-block:last-of-type{
+        width:90%;
+        margin: 2% auto;
+        display:block;
+    }
+    .half-width{
+        width:90%;
+    }
+    table thead tr td, table tbody tr td{
+        font-size:.8em;
+        font-weight:500;
+    }
+    table tbody tr td{
+        padding: 5%;
+    }
+}
