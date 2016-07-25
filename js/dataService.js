@@ -3,6 +3,7 @@ angular.module('myApp').service('dataService', function(){
     if(localStorage.getItem('hourInfo') === null){
         data = angular.toJson(hours);
         hourInfo = localStorage.setItem('hourInfo', data);
+        hourInfo = angular.fromJson(localStorage.getItem('hourInfo'));
     }
     else{
         hourInfo = angular.fromJson(localStorage.getItem('hourInfo'));
